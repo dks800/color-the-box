@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50vh;
+            flex-direction: column;
+            font-family: fantasy;
+            text-transform: uppercase;
+        }
+
+        #box {
+            height: 200px;
+            width: 150px;
+            border: 1px black solid;
+            margin: 10px;
+            transition: background-color 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <input type="text" id="colorName" placeholder="Enter color name">
+    <p><u>Enter a color name to change Box background color</u></p>
+</body>
+<script>
+    const input = document.querySelector("#colorName");
+    const box = document.querySelector("#box");
+    input.addEventListener("input", function (e) {
+        let color = e.currentTarget.value;
+        box.style.backgroundColor = color;
+    })
+</script>
+
+</html>
